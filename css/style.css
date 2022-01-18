@@ -21,13 +21,13 @@
 .sidebar {
 }
 
-.open {
+/* .open {
   position: fixed;
   width: 300px;
   z-index: 2001;
   background-color: wheat;
   display: block !important;
-}
+} */
 
 .side-bar-btn {
   cursor: pointer;
@@ -39,5 +39,16 @@
   border-radius: 50%;
 }
 
-@media screen and (max-width: 800px) {
+.search-input {
+  max-width: 190px;
+}
+
+@media screen and (max-width: 992px) {
+  .sidebar {
+    position: fixed;
+    width: 300px;
+    z-index: 2001;
+    background-color: wheat;
+    margin-left: -100%;
+  }
 }
