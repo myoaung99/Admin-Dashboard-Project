@@ -10,6 +10,7 @@
 .content {
   background-color: var(--primary-soft);
   overflow: scroll;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4) inset;
 }
 
 .header {
@@ -41,6 +42,20 @@
 
 .search-input {
   max-width: 190px;
+}
+
+.status-card {
+  border: none;
+  transition: 0.3s;
+}
+
+.status-card:hover {
+  transform: translateY(-5px);
+}
+
+.status-card:active {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 
 @media screen and (max-width: 992px) {

@@ -13,3 +13,7 @@ $(".hide-sidebar-btn").click(() => {
 window.onorientationchange = function () {
   window.location.reload();
 };
+
+function go(url) {
+  location.href = `${url}`;
+}
