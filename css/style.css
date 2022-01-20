@@ -58,6 +58,32 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 
+.ov-avatar {
+  margin-left: -25px;
+  width: 50px;
+}
+
+.item-carousel {
+  margin-top: -140px;
+}
+
+.item-img-carousel {
+  transition-duration: 0.2s;
+  transition-delay: 0.1s;
+}
+
+.item-img-carousel:hover {
+  transform: translateY(-5px);
+}
+
+.carousel-indicators {
+  bottom: -30px;
+}
+
+.carousel-indicators button {
+  background-color: #007bff;
+}
+
 @media screen and (max-width: 992px) {
   .sidebar {
     position: fixed;
