@@ -36,11 +36,11 @@
       </div>
 
 
-      <div class="col-12 col-lg-9 col-xl-10 vh-100 p-3 content">
+      <div class="col-12 col-lg-9 col-xl-10 vh-100 content">
         <!--Header Area Start-->
         <div class="row header">
           <div class="col-12 p-0">
-            <div class="head-container p-0">
+            <div class="head-container ">
               <div
               class="p-2 bg-primary rounded d-flex justify-content-between align-items-center mb-3"
             >
@@ -160,20 +160,14 @@
                       <div class="mb-3">
                         <label for="mainCategory" class="form-label mb-2 fs-6">Main Category</label>
                         <select name="mainCategory" class="form-select" id="mainCategory" aria-label="Default select example">
-                          <option selected></option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
+                          <option value=""  disabled selected>Select Category</option>
                         </select>
                       </div>
 
                       <div class="mb-3">
                         <label for="subCategory" class="form-label mb-2 fs-6">Sub Category</label>
                         <select name="subCategory" class="form-select" id="subCategory" aria-label="Default select example">
-                          <option selected></option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
+                          <option value="" disabled selected>Select Category</option>
                         </select>
                       </div>
                     </div>
@@ -189,11 +183,8 @@
                         <div class="col-6">
                           <div class="mb-3">
                             <label for="itemUnit" class="form-label mb-2 fs-6">Unit</label>
-                            <select name="itemUnit" class="form-select" id="itemUnit" aria-label="Default select example">
-                              <option selected></option>
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
+                            <select  name="itemUnit" class="form-select" id="itemUnit" aria-label="Default select example">
+                              <option value="" selected>Select Category</option>
                             </select>
                           </div>
                         </div>
@@ -211,17 +202,10 @@
                     <hr>
                     <button class="btn btn-primary"><i class="feather-plus-circle"></i> Add Item</button>
                 </form>
-
-             
-
-
-
               </div>
             </div>
           </div>
-
         </div>
-
         <!--Content Area End-->
       </div>
     </div>
@@ -236,6 +220,33 @@
   </script>
 
   <script src="js/app.js"></script>
+  <script>
+    const mainCategory = ["Phone", "Computer", "TV"];
+    const subCategory = [
+      {name: "Samsumg", category_id: 0},
+      {name: "Oppo", category_id: 0},
+      {name: "Mi", category_id: 0},
+      {name: "Asus", category_id: 1},
+      {name: "Acer", category_id: 1},
+      {name: "Mac", category_id: 1},
+      {name: "TCL", category_id: 2},
+      {name: "AOC", category_id: 2},
+      {name: "Lenovo", category_id: 2},
+    ]
+    mainCategory.map((el,index)=>{
+        $("#mainCategory").append(`<option value="${index}">${el}</option>`)
+    });
+    subCategory.map((el,index)=>{
+        $("#subCategory").append(`<option value="${index}" data-category=${el.category_id}>${el.name}</option>`)
+    });
+
+    $("#mainCategory").on("change", function(){
+      const currentCategory = $(this).val();
+      $("#subCategory option").hide();
+      $(`[data-category=${currentCategory}]`).show();
+    })
+  
+  </script>
 </body>
 
 </html>
