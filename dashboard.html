@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Admin Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="vendor/feather-icons-web/feather.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main container-fluid">
+      <div class="row">
+        <!-- Side Bar-->
+
+        <div class="col-12 col-lg-3 col-xl-2 vh-100 sidebar">
+          <div
+            class="d-flex justify-content-between align-items-center py-3 mt-2"
+          >
+            <!--Side bar Brand-->
+            <div class="brand d-flex align-items-center">
+              <div class="p-3">
+                <i class="feather-shopping-bag h4 text-primary"></i>
+              </div>
+              <span class="text-primary h4">My Shop</span>
+            </div>
+
+            <!--Side Bar Hide Button-->
+            <button class="hide-sidebar-btn btn btn-light d-block d-lg-none">
+              <i class="fas feather-x text-dark" style="font-size: 2em"></i>
+            </button>
+          </div>
+        </div>
+
+     
+        <div class="col-12 col-lg-9 col-xl-10 vh-100 content">
+           <!--Header Area Start-->
+          <div class="row header">
+            <div class="col-12 p-0">
+              <div class="head-container ">
+                <div
+                class="p-2 bg-primary rounded d-flex justify-content-between align-items-center mb-3"
+              >
+                <!-- Show Side Bar Button-->
+                <button
+                  class="show-sidebar-btn btn btn-primary me-2 d-block d-lg-none"
+                >
+                  <i
+                    class="fas feather-menu text-light"
+                    style="font-size: 2em"
+                  ></i>
+                </button>
+
+                <!--Search Form and Button-->
+                <form
+                  action=""
+                  method="post"
+                  class="d-none d-md-block flex-grow-1"
+                >
+                  <div class="d-flex align-self-start">
+                    <input type="text" class="form-control search-input" />
+                    <button class="btn btn-light ms-2">
+                      <i class="fas feather-search text-primary"></i>
+                    </button>
+                  </div>
+                </form>
+
+                <!--Drop Down-->
+                <div class="dropdown">
+                  <button
+                    class="btn btn-primary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="./img/user/avatar1.jpg"
+                      class="user-avatar"
+                      alt=""
+                    />
+                    <span class="d-none d-lg-inline"> Myo Myint Aung</span>
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Logout</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              </div>
+              <!-- Header Container and Background-->
+             
+            </div>
+          </div>
+           <!--Header Area End-->
+          <!--Content Area Start-->
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-3">
+              <div
+                class="card p-4 mb-2 my-lg-3 status-card"
+                onclick="go('https:\/\/google.com')"
+              >
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    <i class="feather-shopping-bag h1 text-primary"></i>
+                  </div>
+                  <div class="col-9">
+                    <p class="mb-2 h4 font-weight-bolder">
+                      <span class="counter-up">123</span>
+                    </p>
+                    <p class="mb-0">Today Order</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="card p-4 mb-2 my-lg-3 status-card">
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    <i class="feather-user h1 text-primary"></i>
+                  </div>
+                  <div class="col-9">
+                    <p class="mb-2 h4 font-weight-bolder">
+                      <span class="counter-up">456</span>
+                    </p>
+                    <p class="mb-0">Today User</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 ps-">
+              <div class="card p-4 mb-2 my-lg-3 status-card">
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    <i class="feather-box h1 text-primary"></i>
+                  </div>
+                  <div class="col-9">
+                    <p class="mb-2 h4 font-weight-bolder">
+                      <span class="counter-up">223</span>
+                    </p>
+                    <p class="mb-0">Total Items</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="card p-4 mb-2 my-lg-3 status-card">
+                <div class="row align-items-center">
+                  <div class="col-3">
+                    <i class="feather-map h1 text-primary"></i>
+                  </div>
+                  <div class="col-9">
+                    <p class="mb-2 h4 font-weight-bolder">
+                      <span class="counter-up">14</span>
+                    </p>
+                    <p class="mb-0">Location</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-end">
+            <div class="col-12 col-xl-7">
+              <div class="card">
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p class="h4 mb-0">Order & Viewer</p>
+                    <div class="">
+                      <img
+                        src="./img/user/avatar1.jpg"
+                        alt=""
+                        class="rounded-circle ov-avatar border border-white border-1"
+                      />
+                      <img
+                        src="./img/user/avatar2.jpg"
+                        alt=""
+                        class="rounded-circle ov-avatar border border-white border-1"
+                      />
+                      <img
+                        src="./img/user/avatar3.jpg"
+                        alt=""
+                        class="rounded-circle ov-avatar border border-white border-1"
+                      />
+                      <img
+                        src="./img/user/avatar4.jpg"
+                        alt=""
+                        class="rounded-circle ov-avatar border border-white border-1"
+                      />
+                      <img
+                        src="./img/user/avatar5.jpg"
+                        alt=""
+                        class="rounded-circle ov-avatar border border-white border-1"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="">
+                    <canvas id="ov" height="120px"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-5">
+              <div class="card item-card">
+                <div class="card-body">
+                  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active bg-primary" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="bg-primary"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="bg-primary"></button>
+                    </div>
+                    <div class="carousel-inner item-carousel">
+                      <div class="carousel-item active">
+                        <div
+                        class="d-flex justify-content-between align-items-end "
+                      >
+                        <div class="flex-grow-1 mb-2">
+                          <p class="mb-0 h5"> Coffee</p>
+                          <p class="mb-3">500 MMK</p>
+                          <div class="progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              style="width: 75%"
+                              aria-valuenow="25"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+    
+                        <img
+                          src="./img/items/coffee cup.png"
+                          class="w-50 item-img-carousel"
+                          alt=""
+                        />
+                      </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div
+                        class="d-flex justify-content-between align-items-end "
+                      >
+                        <div class="flex-grow-1 mb-2">
+                          <p class="mb-0 h5">Fleshy Mouse</p>
+                          <p class="mb-3">10,000 MMK</p>
+                          <div class="progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              style="width: 65%"
+                              aria-valuenow="25"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+    
+                        <img
+                          src="./img/items/mouse.png"
+                          class="w-50 item-img-carousel"
+                          alt=""
+                        />
+                      </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div
+                        class="d-flex justify-content-between align-items-end "
+                      >
+                        <div class="flex-grow-1 mb-2">
+                          <p class="mb-0 h5">Super Fast USB</p>
+                          <p class="mb-3">5,000 MMK</p>
+                          <div class="progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              style="width: 80%"
+                              aria-valuenow="25"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+    
+                        <img
+                          src="./img/items/usb.png"
+                          class="w-50 item-img-carousel"
+                          alt=""
+                        />
+                      </div>
+                      </div> 
+                    </div>
+                    
+                  </div>
+
+                  
+                </div>
+                  
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-xl-4 ">
+                <div class="card mt-lg-3">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <p class="h4">Order & Place</p>
+                      <i class="feather-pie-chart h4 text-primary"></i>
+                    </div>
+                    
+                    <div class="">
+                      <canvas id="pv" height="200px"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-xl-8">
+                <div class="card sub-list-table overflow-scroll">
+                  <div class="">
+                    <div class=" d-flex justify-content-between align-items-center sticky-top bg-light">
+                      <p class="h4 sub-list-title mb-0 p-3">Subscriber List</p>
+                      <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="feather-more-vertical h4 text-primary"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Edit</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#"><i class="feather-trash-2 text-danger"></i> Delete</a>
+                        </div>
+                      </div>
+                     
+                    </div>
+                     <table class="table sub-list p-2 table-hover  mb-0">
+                    <thead>
+                       <tr>
+                          <th>Name</th>
+                          <th>Company</th>
+                          <th>Start Date</th>
+                          <th>Status</th>
+                          <th>Amount</th>
+                          <th>Action</th>
+                       </tr>
+                    </thead>
+                    <tbody class=""> 
+                       <tr>
+                          <td>Michael Austin</td>
+                          <td>ABC Fintech LTD.</td>
+                          <td>Jan 1,2019</td>
+                          <td><span class="badge bg-danger">Close</span></td>
+                          <td>$ 1000.00</td>
+                          <td class="center-align"><i class="feather-trash-2 text-danger"></i></td>
+                       </tr>
+                       <tr>
+                          <td>Aldin Rakić</td>
+                          <td>ACME Pvt LTD.</td>
+                          <td>Jan 10,2019</td>
+                          <td><span class="badge bg-success">Open</span></td>
+                          <td>$ 3000.00</td>
+                          <td class="center-align"><i class="feather-trash-2 text-danger"></i></td>
+                       </tr>
+                       <tr>
+                          <td>İris Yılmaz</td>
+                          <td>Collboy Tech LTD.</td>
+                          <td>Jan 12,2019</td>
+                          <td><span class="badge bg-success">Open</span></td>
+                          <td>$ 2000.00</td>
+                          <td class="center-align"><i class="feather-trash-2 text-danger"></i></td>
+                       </tr>
+                       <tr>
+                          <td>Lidia Livescu</td>
+                          <td>My Fintech LTD.</td>
+                          <td>Jan 14,2019</td>
+                          <td><span class="badge bg-danger">Close</span></td>
+                          <td>$ 1100.00</td>
+                          <td class="center-align"><i class="feather-trash-2 text-danger"></i></td>
+                       </tr>
+                       <tr>
+                        <td>Michael Austin</td>
+                        <td>ABC Fintech LTD.</td>
+                        <td>Jan 1,2019</td>
+                        <td><span class="badge bg-danger">Close</span></td>
+                        <td>$ 1000.00</td>
+                        <td class="center-align"><i class="feather-trash-2 text-danger"></i></td>
+                     </tr>
+                     <tr>
+                        <td>Aldin Rakić</td>
+                        <td>ACME Pvt LTD.</td>
+                        <td>Jan 10,2019</td>
+                        <td><span class="badge bg-success">Open</span></td>
+                        <td>$ 3000.00</td>
+                        <td class="center-align"><i class="feather-trash-2 text-danger"></i></td>
+                     </tr>
+                     <tr>
+                        <td>İris Yılmaz</td>
+                        <td>Collboy Tech LTD.</td>
+                        <td>Jan 12,2019</td>
+                        <td><span class="badge bg-success">Open</span></td>
+                        <td>$ 2000.00</td>
+                        <td class="center-align"><i class="feather-trash-2 text-danger"></i></td>
+                     </tr>
+                     <tr>
+                        <td>Lidia Livescu</td>
+                        <td>My Fintech LTD.</td>
+                        <td>Jan 14,2019</td>
+                        <td><span class="badge bg-danger">Close</span></td>
+                        <td>$ 1100.00</td>
+                        <td class="center-align"><i class="feather-trash-2 text-danger"></i></td>
+                     </tr>
+                    </tbody>
+                 </table></div>
+                 
+                </div>
+              </div>
+            </div>
+             <!--Content Area End-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.2/umd/popper.min.js"
+      integrity="sha512-aDciVjp+txtxTJWsp8aRwttA0vR2sJMk/73ZT7ExuEHv7I5E6iyyobpFOlEFkq59mWW8ToYGuVZFnwhwIUisKA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./vendor/way_point/jquery.waypoints.js"></script>
+    <script src="./vendor/counter_up/counter_up.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

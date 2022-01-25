@@ -93,6 +93,15 @@
   transform: scale(1.02);
 }
 
+.header {
+  top: 0 !important;
+}
+
+.head-container {
+  padding-top: 20px;
+  background-color: #f3f3f3;
+}
+
 @media screen and (max-width: 992px) {
   .sidebar {
     position: fixed;
@@ -127,5 +136,9 @@
   }
   .sub-list-table .sub-list-title {
     padding-top: 1rem;
+  }
+  .head-container {
+    padding-top: 0px;
+    background-color: #f3f3f3;
   }
 }
