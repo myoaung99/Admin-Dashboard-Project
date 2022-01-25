@@ -84,6 +84,15 @@
   background-color: #007bff;
 }
 
+.sub-list tr {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.sub-list tr:active {
+  transform: scale(1.02);
+}
+
 @media screen and (max-width: 992px) {
   .sidebar {
     position: fixed;
@@ -110,5 +119,13 @@
   }
   #ov {
     margin-top: 10px;
+  }
+  .sub-list-table {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.3rem;
+  }
+  .sub-list-table .sub-list-title {
+    padding-top: 1rem;
   }
 }
