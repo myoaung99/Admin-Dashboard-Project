@@ -102,6 +102,57 @@
   background-color: #f3f3f3;
 }
 
+.fullscreen-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2005;
+}
+
+.pagination li {
+  padding: 0 !important;
+}
+
+.page-item:not(:first-child) .page-link {
+  margin-left: 0 !important;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+  width: auto;
+  display: inline-block;
+}
+
+.form-select-sm {
+  width: 80px !important;
+
+  font-size: 0.875rem;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+  margin-left: 0.5em;
+  display: inline-block;
+  width: auto;
+}
+
+.page-link:focus-visible {
+  outline: none;
+}
+
+.pagination {
+  justify-content: flex-end;
+}
+
+.dataTables_filter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 992px) {
   .sidebar {
     position: fixed;

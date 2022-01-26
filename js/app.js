@@ -24,3 +24,16 @@ var tooltipTriggerList = [].slice.call(
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl);
 });
+
+$(".fullscreen-btn").on("click", function () {
+  console.log("ok");
+  $(this).closest(".card").toggleClass("fullscreen-card");
+
+  $(this).closest(".card").hasClass("fullscreen-card")
+    ? $(".fullscreen-btn i")
+        .removeClass("feather-maximize-2")
+        .addClass("feather-minimize-2")
+    : $(".fullscreen-btn i")
+        .removeClass("feather-minimize-2")
+        .addClass("feather-maximize-2");
+});
