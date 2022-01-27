@@ -37,3 +37,16 @@ $(".fullscreen-btn").on("click", function () {
         .removeClass("feather-minimize-2")
         .addClass("feather-maximize-2");
 });
+
+// Auto Scroll
+const windowHeight = $(window).height();
+const currentMenuHeight = $(".nav-menu .active-tab").offset().top;
+
+if (currentMenuHeight > windowHeight * 0.8) {
+  $(".sidebar").animate(
+    {
+      scrollTop: currentMenuHeight,
+    },
+    1000
+  );
+}
