@@ -4,7 +4,28 @@
 }
 
 :root {
+  --primary: #0d6efd;
   --primary-soft: #f3f3f3;
+  --dark: rgb(43, 43, 43);
+  --soft-dark: rgb(207, 207, 207);
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.sidebar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.content {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .content {
@@ -20,6 +41,7 @@
 }
 
 .sidebar {
+  overflow: scroll;
 }
 
 /* .open {
@@ -151,6 +173,59 @@ div.dataTables_wrapper div.dataTables_filter input {
 
 .breadcrumb-item a {
   text-decoration: none;
+}
+
+.nav-menu {
+}
+
+.menu-title {
+  padding: 10px 0;
+  color: var(--soft-dark);
+}
+
+.menu-item {
+  margin-bottom: 1px;
+}
+
+.menu-item:hover {
+  background-color: var(--soft-dark);
+  border-radius: 0.25rem;
+}
+
+.menu-item-link {
+  border-radius: 0.25rem;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--dark);
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-item-link:hover {
+  color: var(--dark);
+}
+
+.menu-item-link i {
+}
+.menu-item-link span {
+}
+
+.menu-spacer {
+  padding: 5px 0;
+}
+
+.active-tab {
+  background-color: var(--primary);
+  color: white !important;
+}
+.active-tab:hover {
+  background-color: var(--primary);
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 992px) {
