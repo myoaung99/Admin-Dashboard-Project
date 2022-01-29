@@ -215,7 +215,6 @@ div.dataTables_wrapper div.dataTables_filter input {
 }
 
 .active-tab {
-  background-color: var(--primary);
   color: white !important;
 }
 .active-tab:hover {
